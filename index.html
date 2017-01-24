@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1A Downloader</title>
+    <link rel='stylesheet' type='text/css' href='node_modules/topcoat/css/topcoat-desktop-light.min.css'>
+    <link rel='stylesheet' href='index.css'>
+  </head>
+  <body>
+    <nav>
+      <p><a class ='topcoat-button' href='index.html' target='_self'>Refresh</a></p>
+    </nav>
+    <p id='loading'>Loading...</p>
+    <template>
+      <article>
+        <h1>{title}</h1>
+        <p><a class='topcoat-button' href='{download}' data-title='{title}' data-filename='{filename}'>Download</a></p>
+      </article>
+    </template>
+    <script src='index.js'></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "the1adownloader",
+  "version": "1.0.0",
+  "license": "CC-BY-4.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kethinov/1ADownloader.git"
+  },
+  "main": "main.js",
+  "dependencies": {
+    "feedparser": "1.1.3",
+    "request": "2.64.0",
+    "topcoat": "0.7.5",
+    "moment": "2.17.1"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "1.2.6",
+    "electron-packager": "7.2.0"
+  },
+  "scripts": {
+    "build": "npm run build-64 && npm run build-win32 && npm run build-linux32",
+    "build-64": "npm run build-mac && npm run build-win && npm run build-linux",
+    "build-mac": "electron-packager ./ '1A Downloader' --app-bundle-id=the1adownloader --icon=images/appicon.icns --asar --prune --out=build --overwrite=true --platform=darwin --arch=x64 --version=1.2.6 --app-version=1.0.9 && cd 'build/1A Downloader-darwin-x64' && rm -rf LICENSE* version && zip -9 -ry ../1A.Downloader-darwin-x64.zip '../1A Downloader-darwin-x64' && cd ../../",
+    "build-win": "electron-packager ./ '1A Downloader' --app-bundle-id=the1adownloader --version-string.FileDescription='1A Downloader' --icon=images/appicon.ico --asar --prune --out=build --overwrite=true --platform=win32 --arch=x64 --version=1.2.6 --app-version=1.0.9 && cd 'build/1A Downloader-win32-x64' && rm -rf LICENSE* version && zip -9 -r ../1A.Downloader-win32-x64.zip '../1A Downloader-win32-x64' && cd ../../",
+    "build-win32": "electron-packager ./ '1A Downloader' --app-bundle-id=the1adownloader --version-string.FileDescription='1A Downloader' --icon=images/appicon.ico --asar --prune --out=build --overwrite=true --platform=win32 --arch=ia32 --version=1.2.6 --app-version=1.0.9 && cd 'build/1A Downloader-win32-ia32' && rm -rf LICENSE* version && zip -9 -r ../1A.Downloader-win32-ia32.zip '../1A Downloader-win32-ia32' && cd ../../",
+    "build-linux": "electron-packager ./ '1A Downloader' --app-bundle-id=the1adownloader --asar --prune --out=build --overwrite=true --platform=linux --arch=x64 --version=1.2.6 --app-version=1.0.9 && cd 'build/1A Downloader-linux-x64' && rm -rf LICENSE* version && zip -9 -r ../1A.Downloader-linux-x64.zip '../1A Downloader-linux-x64' && cd ../../",
+    "build-linux32": "electron-packager ./ '1A Downloader' --app-bundle-id=the1adownloader --asar --prune --out=build --overwrite=true --platform=linux --arch=ia32 --version=1.2.6 --app-version=1.0.9 && cd 'build/1A Downloader-linux-ia32' && rm -rf LICENSE* version && zip -9 -r ../1A.Downloader-linux-ia32.zip '../1A Downloader-linux-ia32' && cd ../../"
+  }
+}
