@@ -1,4 +1,4 @@
-<img src='https://raw.githubusercontent.com/kethinov/1ADownloader/master/images/icon.png' alt='1A Downloader' width='128' height='128'> [![Gittip](http://img.shields.io/gittip/kethinov.png)](https://www.gittip.com/kethinov/)
+<img src='https://raw.githubusercontent.com/kethinov/1ADownloader/master/images/icon.png' alt='1A Downloader' width='128' height='128'> 
 
 [The 1A Show](http://the1a.org/)'s website doesn't let you download episodes (easily) and their podcast feed frequently is stale.
 
