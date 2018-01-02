@@ -7,11 +7,11 @@ This app will let you download the episodes directly to your computer rather tha
 Download
 ===
 
-- [Windows 64-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.0/1A.Downloader-win32-x64.zip)
-- [Windows 32-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.0/1A.Downloader-win32-ia32.zip)
-- [Linux 64-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.0/1A.Downloader-linux-x64.zip)
-- [Linux 32-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.0/1A.Downloader-linux-ia32.zip)
-- [macOS 64-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.0/1A.Downloader-darwin-x64.zip)
+- [Windows 64-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.1/1A.Downloader-win32-x64.zip)
+- [Windows 32-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.1/1A.Downloader-win32-ia32.zip)
+- [Linux 64-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.1/1A.Downloader-linux-x64.zip)
+- [Linux 32-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.1/1A.Downloader-linux-ia32.zip)
+- [macOS 64-bit](https://github.com/kethinov/1ADownloader/releases/download/1.0.1/1A.Downloader-darwin-x64.zip)
 
 Run from source
 ===
