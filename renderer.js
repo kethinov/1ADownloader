@@ -1,4 +1,4 @@
-var http = require('http'),
+var https = require('https'),
     request = require('request'),
     ipcRenderer = require('electron').ipcRenderer,
     fs = require('fs'),
@@ -35,11 +35,11 @@ function getSegment() {
     epString = 'a' + hour + year + month + day + (segment ? '-' + segment : '') + '.mp3';
 
     // check if this file exists
-    req = http.request(
+    req = https.request(
     {
       method: 'HEAD',
       host: 'downloads.wamu.org',
-      port: 80,
+      port: 443,
       path: '/mp3/1a/'+year+'/'+month+'/' + epString
     },
 
@@ -79,7 +79,7 @@ function getSegment() {
 
         // fetch metadata by screen scraping site
         if (!scrapes['20'+year+'-'+month+'-'+day+'/']) {
-          http.get('http://the1a.org/shows/20'+year+'-'+month+'-'+day+'/', (res) => {
+          https.get('https://the1a.org/shows/20'+year+'-'+month+'-'+day+'/', (res) => {
             const statusCode = res.statusCode;
             const contentType = res.headers['content-type'];
 
@@ -114,13 +114,13 @@ function getSegment() {
           var scrape = scrapes['20'+year+'-'+month+'-'+day+'/'];
 
           thisScrapeCount++;
-          epTitle = scrape.split('<h2 class="tz-h-lg"><a href="http://the1a.org/shows/20'+year+'-'+month+'-'+day+'/')[thisScrapeCount].split('</a>')[0].split('">')[1];
-          fileTitle = scrape.split('<h2 class="tz-h-lg"><a href="http://the1a.org/shows/20'+year+'-'+month+'-'+day+'/')[thisScrapeCount].split('">')[0];
+          epTitle = scrape.split('<h2 class="tz-h-lg"><a href="https://the1a.org/shows/20'+year+'-'+month+'-'+day+'/')[thisScrapeCount].split('</a>')[0].split('">')[1];
+          fileTitle = scrape.split('<h2 class="tz-h-lg"><a href="https://the1a.org/shows/20'+year+'-'+month+'-'+day+'/')[thisScrapeCount].split('">')[0];
 
           document.body.insertAdjacentHTML('beforeEnd', content
           .replace(/{title}/g, year + '-' + month + '-' + day + ' (Hour '+hour+') (Segment '+segment+'): ' + epTitle)
           .replace('{filename}', '1A - ' + year + '-' + month + '-' + day + ' (Hour '+hour+') (Segment '+segment+') '+fileTitle+'.mp3')
-          .replace('{download}', 'http://downloads.wamu.org/mp3/1a/'+year+'/'+month+'/' + epString));
+          .replace('{download}', 'https://downloads.wamu.org/mp3/1a/'+year+'/'+month+'/' + epString));
 
           notExistsCount = 0;
           epCount++;
@@ -204,12 +204,12 @@ window.addEventListener('click', function(e) {
       el.style.visibility = 'hidden';
       el.parentNode.insertBefore(spinner, el.parentNode.firstChild);
 
-      req = http.request(
+      req = https.request(
         {
           method: 'HEAD',
           host: 'downloads.wamu.org',
-          port: 80,
-          path: el.href.replace('http://downloads.wamu.org', '')
+          port: 443,
+          path: el.href.replace('https://downloads.wamu.org', '')
         },
 
         function(res) {

@@ -1,6 +1,7 @@
 {
   "name": "the1adownloader",
-  "version": "1.0.0",
+  "productName": "The 1A Downloader",
+  "version": "1.0.1",
   "license": "CC-BY-4.0",
   "repository": {
     "type": "git",
