@@ -10,7 +10,7 @@ app.on('ready', function() {
     icon: process.platform === 'linux' && __dirname + '/images/icon.png'
   });
   win.loadURL('file://' + __dirname + '/index.html');
-  //win.openDevTools(); // uncomment to enter dev mode
+  // win.openDevTools(); // uncomment to enter dev mode
 
   win.on('closed', function() {
     win = null;
