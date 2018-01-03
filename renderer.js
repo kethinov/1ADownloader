@@ -125,8 +125,17 @@ function getSegment() {
           notExistsCount = 0;
           epCount++;
           if (epCount < maxEpisodes) {
-            if (hour === 1) {
+            if (hour === 1 && segment === 0) {
               hour = 2;
+            }
+            else if (hour === 1) {
+              if (segment < 2) {
+                segment++;
+              }
+              else {
+                hour = 2;
+                segment = 0;
+              }
             }
             else if (hour === 2) {
               if (segment < 2) {
