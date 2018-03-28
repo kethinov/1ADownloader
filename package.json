@@ -1,7 +1,7 @@
 {
   "name": "the1adownloader",
   "productName": "The 1A Downloader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "CC-BY-4.0",
   "repository": {
     "type": "git",
@@ -9,14 +9,15 @@
   },
   "main": "main.js",
   "dependencies": {
-    "feedparser": "1.1.3",
-    "request": "2.64.0",
+    "feedparser": "2.2.9",
+    "request": "2.85.0",
     "topcoat": "0.7.5",
-    "moment": "2.17.1"
+    "moment": "2.21.0"
   },
   "devDependencies": {
-    "electron-prebuilt": "1.2.6",
-    "electron-packager": "7.2.0"
+    "electron": "1.8.4",
+    "electron-packager": "11.2.0",
+    "standard": "11.0.1"
   },
   "scripts": {
     "build": "npm run build-64 && npm run build-win32 && npm run build-linux32",
