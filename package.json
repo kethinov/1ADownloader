@@ -17,7 +17,7 @@
   "devDependencies": {
     "electron": "1.8.4",
     "electron-packager": "11.2.0",
-    "standard": "11.0.1"
+    "standard": "13.1.0"
   },
   "scripts": {
     "build": "npm run build-64 && npm run build-win32 && npm run build-linux32",
