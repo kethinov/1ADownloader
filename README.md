@@ -1,4 +1,6 @@
-<img src='https://raw.githubusercontent.com/kethinov/1ADownloader/master/images/icon.png' alt='1A Downloader' width='128' height='128'> 
+<img src='https://raw.githubusercontent.com/kethinov/1ADownloader/master/images/icon.png' alt='1A Downloader' width='128' height='128'>
+
+**This app is currently broken after the January 2020 redesign of 1A's website! I don't have time to fix it right now. Pull requests welcome!**
 
 [The 1A Show](http://the1a.org/)'s website doesn't let you download episodes (easily) and their podcast feed frequently is stale.
 
