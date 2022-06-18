@@ -10,7 +10,7 @@
   "main": "main.js",
   "dependencies": {
     "feedparser": "2.2.9",
-    "request": "2.85.0",
+    "request": "2.87.0",
     "topcoat": "0.7.5",
     "moment": "2.21.0"
   },
