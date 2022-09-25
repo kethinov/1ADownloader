@@ -12,7 +12,7 @@
     "feedparser": "2.2.9",
     "request": "2.85.0",
     "topcoat": "0.7.5",
-    "moment": "2.21.0"
+    "moment": "2.29.4"
   },
   "devDependencies": {
     "electron": "1.8.4",
