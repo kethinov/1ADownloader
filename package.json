@@ -15,7 +15,7 @@
     "moment": "2.21.0"
   },
   "devDependencies": {
-    "electron": "1.8.4",
+    "electron": "22.3.25",
     "electron-packager": "11.2.0",
     "standard": "11.0.1"
   },
